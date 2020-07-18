@@ -71,7 +71,7 @@ const Bio = () => {
         </p>
         <p style={styles.main.p}>
           <a href={`https://twitter.com/${social.twitter}`}>
-            You can find me in twitter
+            I'm on Twitter
           </a>
         </p>
       </div>
