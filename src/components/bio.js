@@ -35,11 +35,20 @@ const Bio = () => {
     }
   `)
 
+  const styles = {
+    main: {
+      p: {
+        marginBottom: 0,
+      },
+    },
+  }
+
   const { author, social } = data.site.siteMetadata
   return (
     <div
       style={{
         display: `flex`,
+        alignItems: `center`,
         marginBottom: rhythm(2.5),
       }}
     >
@@ -56,13 +65,16 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>
-        Written by <strong>{author.name}</strong> {author.summary}
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
-      </p>
+      <div>
+        <p style={styles.main.p}>
+          Written by <strong>{author.name}</strong> {author.summary}
+        </p>
+        <p style={styles.main.p}>
+          <a href={`https://twitter.com/${social.twitter}`}>
+            You can find me in twitter
+          </a>
+        </p>
+      </div>
     </div>
   )
 }
