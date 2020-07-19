@@ -3,10 +3,14 @@ body {
 	color: #FFFFFF;
 }
 
-h1, h2, h3 {
+h1 {
 	color: #F13939;
 }
 
-a {
+h2, h3 {
 	color: #2EBC7C;
+}
+
+a {
+	color: #D8A437
 }
