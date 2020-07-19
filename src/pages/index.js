@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -15,33 +16,64 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const {
+          excerpt = "",
+          fields: { slug = "No title" },
+          frontmatter: { date = "", title = "", description = "", media },
+          timeToRead = 0,
+        } = node || {}
+
         return (
           <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
+            <div>
+              <header>
+                <Link style={{ boxShadow: `none` }} to={slug}>
+                  <h3
+                    style={{
+                      marginBottom: rhythm(1 / 4),
+                    }}
+                  >
+                    {title || slug}
+                  </h3>
                 </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
+                <small>{date}</small>
+              </header>
+              <section style={{ display: `flex`, alignItems: `center` }}>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: description || excerpt,
+                  }}
+                  style={{
+                    marginBottom: 0,
+                  }}
+                />
+                {postImage(media)}
+              </section>
+            </div>
           </article>
         )
       })}
     </Layout>
   )
+}
+
+const postImage = media => {
+  if (media) {
+    return (
+      <Image
+        fluid={media.childImageSharp.fluid}
+        style={{
+          minWidth: `100px`,
+          marginLeft: `10px`,
+        }}
+        imgStyle={{
+          borderRadius: `50%`,
+        }}
+      />
+    )
+  }
+
+  return ""
 }
 
 export default BlogIndex
@@ -64,7 +96,16 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            media {
+              childImageSharp {
+                fluid(maxWidth: 100, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluidLimitPresentationSize
+                }
+              }
+            }
           }
+          timeToRead
         }
       }
     }

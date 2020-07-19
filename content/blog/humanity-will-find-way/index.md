@@ -2,6 +2,7 @@
 title: Humanity will find a way
 date: "2020-07-18T22:12:03.284Z"
 description: "As society, we can only go forward or backward."
+media: "./mechanism.jpg"
 ---
 
 ![](mechanism.jpg)
