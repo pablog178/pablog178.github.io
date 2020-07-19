@@ -15,6 +15,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
+
       {posts.map(({ node }) => {
         const {
           excerpt = "",
