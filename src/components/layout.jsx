@@ -11,40 +11,17 @@ const Layout = ({ location, title, children }) => {
     header = (
       <h1
         style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
+          marginBottom: rhythm(0),
         }}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
+        <Link to={`/`}>{title}</Link>
       </h1>
     )
   } else {
     header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
+      <h2>
+        <Link to={`/`}>{title}</Link>
+      </h2>
     )
   }
   return (
@@ -58,12 +35,15 @@ const Layout = ({ location, title, children }) => {
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer style={{ marginTop: 100 }}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-        {` `}
-        <a href="https://github.com/pablog178/pablog178.github.io">Source</a>
+      <footer>
+        <p>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </p>
+        <p>
+          <a href="https://github.com/pablog178/pablog178.github.io">Source</a>
+        </p>
       </footer>
     </div>
   )

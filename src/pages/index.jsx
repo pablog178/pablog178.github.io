@@ -5,7 +5,7 @@ import Image from "gatsby-image"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -28,27 +28,24 @@ const BlogIndex = ({ data, location }) => {
           <article key={node.fields.slug}>
             <div>
               <header>
-                <Link style={{ boxShadow: `none` }} to={slug}>
+                <Link to={slug}>
                   <h3
                     style={{
-                      marginBottom: rhythm(1 / 4),
+                      marginBottom: rhythm(0),
                     }}
                   >
                     {title || slug}
                   </h3>
                 </Link>
-                <small>{date}</small>
+                <p className="date">{date} • Reading time: {timeToRead}m</p>
               </header>
               <section style={{ display: `flex`, alignItems: `center` }}>
                 <p
+                  style={{}}
                   dangerouslySetInnerHTML={{
-                    __html: description || excerpt,
-                  }}
-                  style={{
-                    marginBottom: 0,
+                    __html: excerpt,
                   }}
                 />
-                {postImage(media)}
               </section>
             </div>
           </article>
@@ -89,14 +86,13 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          excerpt(truncate: false, pruneLength: 200)
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
             media {
               childImageSharp {
                 fluid(maxWidth: 100, quality: 100) {

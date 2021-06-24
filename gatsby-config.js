@@ -1,14 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Pablo's Notes`,
+    title: `Pablo Guevara`,
     author: {
       name: `Pablo Guevara`,
-      summary: `Personal Blog from a Software Engineer, yes, in 2021.`,
+      summary: `Software Engineer @ Anexinet.`,
     },
     description: `Personal blog`,
-    siteUrl: `https://pablog178.github.io/`,
+    siteUrl: `https://pablog.dev/`,
     social: {
       twitter: `pablog178`,
+      github: `pablog178`,
+      source: `github.com/pablog178/pablog178`,
     },
   },
   plugins: [

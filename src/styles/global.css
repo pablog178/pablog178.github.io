@@ -1,16 +1,22 @@
 body {
-	background-color: #36312C;
-	color: #FFFFFF;
+	background-color: #FFF;
+	color: #000;
 }
 
-h1 {
-	color: #F13939;
-}
-
-h2, h3 {
-	color: #2EBC7C;
+h1, h2, h3, h4, h5 {
+	color: #1F4B7C;
 }
 
 a {
-	color: #D8A437
+	color: #275B57
+}
+
+.date {
+	margin: 0;
+	font-size: 0.8rem;
+	color: #0076BA;
+}
+
+.subtitle {
+	color:  #0076BA;
 }
