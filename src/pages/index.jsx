@@ -37,7 +37,9 @@ const BlogIndex = ({ data, location }) => {
                     {title || slug}
                   </h3>
                 </Link>
-                <p className="date">{date} • Reading time: {timeToRead}m</p>
+                <p className="date">
+                  {date} • Reading time: {timeToRead}m
+                </p>
               </header>
               <section style={{ display: `flex`, alignItems: `center` }}>
                 <p

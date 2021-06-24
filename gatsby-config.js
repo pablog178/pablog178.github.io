@@ -8,9 +8,9 @@ module.exports = {
     description: `Personal blog`,
     siteUrl: `https://pablog.dev/`,
     social: {
-      twitter: `pablog178`,
-      github: `pablog178`,
-      source: `github.com/pablog178/pablog178`,
+      twitter: `https://twitter.com/pablog178`,
+      github: `https://github.com/pablog178`,
+      linkedin: `https://www.linkedin.com/in/pablo-guevara`,
     },
   },
   plugins: [
