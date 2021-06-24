@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Refactoring Again`,
+    title: `Pablo's Notes`,
     author: {
       name: `Pablo Guevara`,
-      summary: `I make Mobile and Web Apps for a living.`,
+      summary: `Personal Blog from a Software Engineer, yes, in 2021.`,
     },
     description: `Personal blog`,
     siteUrl: `https://pablog178.github.io/`,
