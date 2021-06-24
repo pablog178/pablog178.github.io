@@ -35,7 +35,7 @@ const Bio = () => {
 	return (
 		<div>
 			<p className="subtitle">
-				{author.summary}
+				{author.name}
 				<a href={social.github}>
 					<img width="20" height="20" src={gh_logo} />
 				</a>
@@ -48,6 +48,7 @@ const Bio = () => {
 					<img width="20" height="20" src={li_logo} />
 				</a>
 			</p>
+			<p className="subtitle">{author.summary}</p>
 		</div>
 	);
 };

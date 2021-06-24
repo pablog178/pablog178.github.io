@@ -17,5 +17,6 @@ $ npm run deploy
 ```
 
 ## Notes
-* GitHub Pages URL: [pablog178.github.io](https://pablog178.github.io)
-* All deployed HTML **must** live on the `master` branch to be reflected.
+
+- GitHub Pages URL: [pablog178.github.io](https://pablog178.github.io)
+- All deployed HTML **must** live on the `master` branch to be reflected.

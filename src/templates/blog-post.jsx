@@ -12,25 +12,23 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 	const { previous, next } = pageContext;
 
 	return (
-		<Layout location={location} title={`< ${siteTitle}`}>
+		<Layout location={location} title="All Posts">
 			<SEO
 				title={post.frontmatter.title}
 				description={post.frontmatter.description || post.excerpt}
 			/>
 			<article>
 				<header>
+					<Bio />
 					<h1>{post.frontmatter.title}</h1>
 					<p className="date">{post.frontmatter.date}</p>
 				</header>
-				<section dangerouslySetInnerHTML={{ __html: post.html }} />
+				<main dangerouslySetInnerHTML={{ __html: post.html }} />
 				<hr
 					style={{
 						marginBottom: rhythm(1),
 					}}
 				/>
-				<footer>
-					<Bio />
-				</footer>
 			</article>
 
 			<nav>

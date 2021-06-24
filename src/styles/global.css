@@ -1,22 +1,57 @@
-body {
-	background-color: #FFF;
-	color: #000;
+:root {
+	--color-anchors: #275b57;
+	--color-bg: #ffffff;
+	--color-content: #000;
+	--color-meta: #0076ba;
+	--color-headers: #1f4b7c;
 }
 
-h1, h2, h3, h4, h5 {
-	color: #1F4B7C;
+body {
+	background-color: var(--color-bg);
+	color: var(--color-content);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: var(--color-headers);
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover {
+	color: var(--color-bg);
+	background-color: var(--color-headers);
 }
 
 a {
-	color: #275B57
+	color: var(--color-anchors);
 }
 
+a:hover {
+	color: var(--color-bg);
+	background-color: var(--color-anchors);
+}
 .date {
 	margin: 0;
 	font-size: 0.8rem;
-	color: #0076BA;
+	color: var(--color-meta);
 }
 
 .subtitle {
-	color:  #0076BA;
+	color: var(--color-meta);
 }

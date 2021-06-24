@@ -19,9 +19,9 @@ const Layout = ({ location, title, children }) => {
 		);
 	} else {
 		header = (
-			<h2>
-				<Link to={`/`}>{title}</Link>
-			</h2>
+			<p>
+				<Link to="/">{title}</Link>
+			</p>
 		);
 	}
 	return (
