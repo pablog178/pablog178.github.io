@@ -143,15 +143,15 @@ const message = 'Person name: ' + person.name + ', age: ' + person.age;
 
 ```javascript
 const person = {
-    name: 'John Doe',
-    age: 47
+	name: 'John Doe',
+	age: 47,
 };
-const message =  `Person name:  ${person.name}, age: ${person.age}`;
+const message = `Person name:  ${person.name}, age: ${person.age}`;
 ```
 
 ```javascript
 function add(a, b) {
-  return a + b;
+	return a + b;
 }
 const message = `5 + 8 = ${add(5, 8)}`; // 5 + 8 = 13
 ```
@@ -264,27 +264,27 @@ const language = person.lang || ''; // default to '' if falsy and renames variab
 ```javascript
 // Now
 const person = {
-    name: 'john doe',
-    age: 21,
-    address: 'Street 123',
-    state: 'PA',
-    country: 'US',
-    lang: 'en-US'
+	name: 'john doe',
+	age: 21,
+	address: 'Street 123',
+	state: 'PA',
+	country: 'US',
+	lang: 'en-US',
 };
 
 const {
-    age, // no default
-    country: nation, // rename variable (`person.country` to variable `nation`)
-    name = 'No name', // defaults to 'No name' if `undefined`
-    address = '', // defaults to '' if `undefined`
-    state = '', // defaults to '' if `undefined`
-    lang: language = '' // defaults to 'No name' if `undefined` and renames the variable
+	age, // no default
+	country: nation, // rename variable (`person.country` to variable `nation`)
+	name = 'No name', // defaults to 'No name' if `undefined`
+	address = '', // defaults to '' if `undefined`
+	state = '', // defaults to '' if `undefined`
+	lang: language = '', // defaults to 'No name' if `undefined` and renames the variable
 } = person;
 ```
 
 ```javascript
 // Before
-const array = [ 1, 2, 3, 4, 5, 6 ];
+const array = [1, 2, 3, 4, 5, 6];
 const num1 = array[0];
 const num2 = array[1];
 const num3 = array[2] !== undefined ? array[2] : -1;

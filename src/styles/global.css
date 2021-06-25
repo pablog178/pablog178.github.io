@@ -6,6 +6,17 @@
 	--color-headers: #1f4b7c;
 }
 
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-anchors: #73FDEA;
+		--color-bg: #000000;
+		--color-content: #ffffff;
+		--color-meta: #00A2FF;
+		--color-headers: #56C1FF;
+	}
+}
+
 body {
 	background-color: var(--color-bg);
 	color: var(--color-content);

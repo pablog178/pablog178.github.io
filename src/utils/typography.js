@@ -12,7 +12,7 @@ Wordpress2016.overrideThemeStyles = () => {
 delete Wordpress2016.googleFonts;
 
 const typography = new Typography({
-	baseFontSize: '14px',
+	baseFontSize: '18px',
 	scaleRatio: 3,
 	baseLineHeight: 1.8,
 	headerFontFamily: ['Alegreya', 'Times', 'serif'],

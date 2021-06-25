@@ -14,7 +14,7 @@ const Layout = ({ location, title, children }) => {
 			<Link to={`/`}>{title}</Link>
 		</h1>
 	);
-	
+
 	return (
 		<div
 			style={{

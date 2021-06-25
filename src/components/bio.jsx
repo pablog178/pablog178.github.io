@@ -9,7 +9,6 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { rhythm, scale } from '../utils/typography';
 
-
 import gh_logo from '../assets/gh.svg';
 import tw_logo from '../assets/tw.svg';
 import li_logo from '../assets/li.svg';
@@ -35,18 +34,18 @@ const Bio = () => {
 
 	const { author, social } = data.site.siteMetadata;
 	return (
-		<div 
+		<div
 			className="author"
 			style={{
-				marginTop: rhythm(1/4),
-				marginBottom: rhythm(1)
+				marginTop: rhythm(1 / 4),
+				marginBottom: rhythm(1),
 			}}
 		>
 			<p
 				className="author-name"
 				style={{
 					...scale(0.3),
-					margin: rhythm(0)
+					margin: rhythm(0),
 				}}
 			>
 				{author.name}
@@ -54,7 +53,7 @@ const Bio = () => {
 			<p
 				className="author-summary"
 				style={{
-					margin: rhythm(0)
+					margin: rhythm(0),
 				}}
 			>
 				{author.summary}
