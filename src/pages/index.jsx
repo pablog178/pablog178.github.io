@@ -28,13 +28,13 @@ const BlogIndex = ({ data, location }) => {
 					<article key={node.fields.slug}>
 						<div>
 							<header>
-								<h3
+								<h2
 									style={{
 										marginBottom: rhythm(0),
 									}}
 								>
 									<Link to={slug}>{title || slug}</Link>
-								</h3>
+								</h2>
 								<p className="date">
 									{date} • Reading time: {timeToRead}m
 								</p>
