@@ -9,11 +9,15 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-anchors: #73FDEA;
+		--color-anchors: #73fdea;
 		--color-bg: #000000;
 		--color-content: #ffffff;
-		--color-meta: #00A2FF;
-		--color-headers: #56C1FF;
+		--color-meta: #00a2ff;
+		--color-headers: #56c1ff;
+	}
+
+	.gh-logo {
+		filter: invert(100%);
 	}
 }
 

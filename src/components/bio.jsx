@@ -60,7 +60,7 @@ const Bio = () => {
 			</p>
 			<p className="author-links">
 				<a href={social.github}>
-					<img width="20" height="20" src={gh_logo} />
+					<img className="gh-logo" width="20" height="20" src={gh_logo} />
 				</a>
 				{'  '}
 				<a href={social.twitter}>
